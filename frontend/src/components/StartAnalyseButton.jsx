@@ -1,11 +1,18 @@
 import "./style/StartAnalyseButton.css";
 
-export default function StartAnalyseButton({ input, setData, inputType, }) {
-
+export default function StartAnalyseButton({
+  input,
+  setData,
+  inputType,
+  isLoading,
+  switchLoading,
+}) {
   async function handleUpload() {
     if (inputType) {
       // fota
       if (!input) return alert("Wybierz plik!");
+      switchLoading();
+
       const formData = new FormData();
       formData.append("image", input); // "image" to nazwa pola
 
@@ -21,12 +28,14 @@ export default function StartAnalyseButton({ input, setData, inputType, }) {
       } catch (err) {
         console.error("Błąd:", err);
       }
+      switchLoading();
     } else {
       // tekst
       if (!input) return alert("Pole jest puste");
+      switchLoading();
       const body = {
         text: input,
-        model: "pro"
+        model: "pro",
       };
 
       const res = await fetch("http://localhost:3000/api/analyze-text", {
@@ -39,14 +48,18 @@ export default function StartAnalyseButton({ input, setData, inputType, }) {
 
       const data = await res.json();
       setData(() => data);
+      switchLoading();
     }
-
   }
 
-  
   return (
-    <button onClick={handleUpload} className="start-analyse-button">
-      Start
-    </button>
+    <>
+      {!isLoading && (
+        <button onClick={handleUpload} className="start-analyse-button">
+          {" "}
+          Start{" "}
+        </button>
+      )}
+    </>
   );
 }

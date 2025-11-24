@@ -11,4 +11,10 @@
     font-size: 1.5em;
     color: white;
     background-color: var(--blue-700);
+    transition: 0.01s;
+}
+
+.start-analyse-button:active {
+    background-color: var(--gray-700);
+    transition: 0.01s;
 }
