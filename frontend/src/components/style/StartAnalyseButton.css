@@ -1,0 +1,14 @@
+.start-analyse-button {
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    height: 8vh;
+    width: 10vw;
+    margin-top: 2vw;
+    font-weight: 500;
+    font-size: 1.5em;
+    color: white;
+    background-color: var(--blue-700);
+}

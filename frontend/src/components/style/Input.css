@@ -1,0 +1,11 @@
+.input-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.input-wrapper > textarea {
+    width: 50%;
+    height: 20vh;
+}
+

@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+:root {
+  /* PRIMARY COLORS */
+  --blue-600: #2563EB;
+  --blue-700: #1D4ED8;
+  --blue-100: #DBEAFE;
+
+  /* STATUS COLORS */
+  --green-600: #16A34A;
+  --green-100: #DCFCE7;
+  --yellow-600: #CA8A04;
+  --yellow-100: #FEF9C3;
+  --red-600: #DC2626;
+  --red-100: #FEE2E2;
+
+  /* NEUTRALS */
+  --gray-900: #111827;
+  --gray-700: #374151;
+  --gray-100: #F3F4F6;
+  --white: #FFFFFF;
+
+  /* RADIUS */
+  --radius-card: 12px;     /* rounded-xl */
+  --radius-input: 8px;     /* rounded-lg */
+  --radius-button: 8px;    /* rounded-lg */
+  --radius-tag: 9999px;    /* full */
+}
+
+* {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  /* font-weight: <weight>; */
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background-color: var(--white);
+  height: 100%;
+}
+
+body {
+  height: 100%;
+}
+
+#root {
+  height: 100%;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+h2 {
+  font-size: 3/4em;
+}
+
+h3 {
+  font-size: 3/8em;
+}
+
+h4 {
+  font-size: 3/16em;
+}
+
+h5 {
+  font-size: 3/32em;
+}

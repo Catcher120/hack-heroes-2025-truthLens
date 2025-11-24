@@ -1,0 +1,31 @@
+.main-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 100%;
+    margin-top: 5vw;
+    background-color: var(--blue-100);
+}
+
+.main-footer > p {
+    font-size: 1em;
+    text-align: center;
+    width: 100%;
+    background-color: var(--blue-600);
+    color: white;
+    padding: 0.5vw;
+}
+
+.main-footer > .made-by {
+    margin-top: 1vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 1vw;
+}
+
+.main-footer > .made-by > ul {
+    list-style: none;
+    margin-top: .5vw;
+}
