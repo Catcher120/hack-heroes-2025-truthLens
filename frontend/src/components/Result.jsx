@@ -1,14 +1,24 @@
 import "./style/Result.css";
 
 export default function Result({ data, setData }) {
-  let color;
+  let trustColor;
+  let riskColor;
   if (data != null) {
     if (data.credibilityScore < 50) {
-      color = "var(--green-600)";
+      trustColor = "var(--red-600)";
     } else if (data.credibilityScore < 75) {
-      color = "var(--yellow-600)";
+      trustColor = "var(--yellow-600)";
     } else {
-      color = "var(--red-600)";
+      trustColor = "var(--green-600)";
+    }
+  }
+  if (data != null) {
+    if (data.riskLevel == "low") {
+      riskColor = "var(--green-600)";
+    } else if (data.riskLevel == "medium") {
+      riskColor = "var(--yellow-600)";
+    } else {
+      riskColor = "var(--red-600)";
     }
   }
   return (
@@ -24,7 +34,7 @@ export default function Result({ data, setData }) {
                   className="fill"
                   style={{
                     width: data.credibilityScore + "%",
-                    backgroundColor: color,
+                    backgroundColor: trustColor,
                   }}
                 ></div>
               </div>
@@ -32,7 +42,7 @@ export default function Result({ data, setData }) {
             <div className="risk-level">
               <h3>
                 Poziom ryzyka:{" "}
-                <span style={{ color: color }}>{data.riskLevel}</span>
+                <span style={{ color: riskColor }}>{data.riskLevel}</span>
               </h3>
             </div>
             <div className="flags">

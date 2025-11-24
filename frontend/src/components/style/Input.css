@@ -7,5 +7,6 @@
 .input-wrapper > textarea {
     width: 50%;
     height: 20vh;
+    padding: 0.5vw;
 }
 
